@@ -4,5 +4,5 @@ CREATE TABLE topcities (
   state text, 
   population real,
   latitude real,
-  longitude real,
+  longitude real
 );
