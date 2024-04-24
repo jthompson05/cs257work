@@ -10,6 +10,6 @@ def my_display(num1, num2):
     return the_string
 
 if __name__ == '__main__':
-    my_port = 9999
+    my_port = 5128
     app.run(host='0.0.0.0', port = my_port) 
     
