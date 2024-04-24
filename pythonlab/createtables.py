@@ -3,7 +3,7 @@ import psycopg2
 db_params = {
     'dbname': 'thompsonj2',
     'user': 'thompsonj2',
-    'password': '****',
+    'password': 'card262chip',
     'host': 'stearns.mathcs.carleton.edu'
 }
 
