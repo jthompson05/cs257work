@@ -19,3 +19,4 @@ def my_color(word1):
 if __name__ == '__main__':
     my_port = 5128
     app.run(host='0.0.0.0', port = my_port) 
+    
