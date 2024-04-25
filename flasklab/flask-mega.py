@@ -1,4 +1,15 @@
 import flask
+import psycopg2
+
+db_params = {
+    'dbname': 'thompsonj2',
+    'user': 'thompsonj2',
+    'password': 'card262chip',
+    'host': 'stearns.mathcs.carleton.edu'
+}
+
+def connect_to_db():
+    return psycopg2.connect(**db_params)
 
 app = flask.Flask(__name__)
 
