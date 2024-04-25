@@ -33,6 +33,15 @@ def my_math(num1, num2):
     the_string = "The sum of the two numbers is " + str(sum) + ".";
     return the_string
 
+@app.route('/pop/<abbrev>')
+def my_state(abbrev):
+    conn = connect_to_db()
+    cur = conn.cursor()
+    cur.execute("SELECT population FROM statepop WHERE code = %s;", (str(abbrev)))
+    result = cur.fetchone()
+    cur.close()
+    conn.close()
+    the_string = "The population of " + abbrev + "is" + result[0] + "."
 
 
 if __name__ == '__main__':
