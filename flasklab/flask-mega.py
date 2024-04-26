@@ -43,6 +43,7 @@ def my_state(abbrev):
     cur.close()
     conn.close()
     the_string = "The population of " + abbrev + "is" + str(result[0]) + "."
+    return the_string
 
 
 if __name__ == '__main__':
