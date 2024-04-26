@@ -37,7 +37,7 @@ def my_math(num1, num2):
 def my_state(abbrev):
     conn = connect_to_db()
     cur = conn.cursor()
-    cur.execute("SELECT population FROM statepop WHERE code = %s;", (str(abbrev)))
+    cur.execute("SELECT population FROM statepop WHERE code = %s;", [str(abbrev)])
     result = cur.fetchone()
     cur.close()
     conn.close()
