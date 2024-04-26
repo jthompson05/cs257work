@@ -3,9 +3,10 @@ import psycopg2
 
 db_params = {
     'dbname': 'thompsonj2',
+    'port': 5432,
     'user': 'thompsonj2',
     'password': 'card262chip',
-    'host': 'stearns.mathcs.carleton.edu'
+    'host': 'localhost'
 }
 
 def connect_to_db():
