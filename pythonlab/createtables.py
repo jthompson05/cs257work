@@ -2,9 +2,10 @@ import psycopg2
 
 db_params = {
     'dbname': 'thompsonj2',
+    'port': 5432,
     'user': 'thompsonj2',
     'password': 'card262chip',
-    'host': 'stearns.mathcs.carleton.edu'
+    'host': 'localhost'
 }
 
 create_cities_table = """

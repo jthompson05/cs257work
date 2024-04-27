@@ -2,9 +2,10 @@ import psycopg2
 
 db_params = {
     'dbname': 'thompsonj2',
+    'port': 5432,
     'user': 'thompsonj2',
     'password': 'card262chip',
-    'host': 'stearns.mathcs.carleton.edu'
+    'host': 'localhost'
 }
 
 def connect_to_db():
@@ -62,7 +63,7 @@ def total_population_by_state():
     conn = connect_to_db()
     cur = conn.cursor()
     # This checks if the input is an abbreviation
-    cur.execute("SELECT full_name FROM statepop WHERE code = %s;", (state_input.upper(),))
+    cur.execute("SELECT state FROM statepop WHERE code = %s;", (state_input.upper(),))
     state_name = cur.fetchone()
     if state_name:
         state_input = state_name[0]
