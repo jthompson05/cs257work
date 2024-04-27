@@ -35,7 +35,7 @@ def largest_population_city():
 def smallest_population_city_mn():
     conn = connect_to_db()
     cur = conn.cursor()
-    cur.execute("SELECT city FROM topcities WHERE state = 'MN' ORDER BY population ASC LIMIT 1;")
+    cur.execute("SELECT city FROM topcities WHERE state = 'Minnesota' ORDER BY population ASC LIMIT 1;")
     result = cur.fetchone()
     cur.close()
     conn.close()
