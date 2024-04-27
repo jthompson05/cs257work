@@ -80,8 +80,8 @@ def main():
     check_northfield()
     largest_population_city()
     smallest_population_city_mn()
-    furthest_cities()
-    total_population_by_state()
+    # furthest_cities()
+    # total_population_by_state()
 
 if __name__ == "__main__":
     try:
