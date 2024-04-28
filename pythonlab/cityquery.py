@@ -74,13 +74,13 @@ def total_population_by_state():
         cur.close()
         conn.close()
         print(f"The total population of all the cities in {state_input} is: {result[0]}")
-        
+
 def main():
     check_northfield()
     largest_population_city()
     smallest_population_city_mn()
     furthest_cities()
-    # total_population_by_state()
+    total_population_by_state()
 
 if __name__ == "__main__":
     try:
