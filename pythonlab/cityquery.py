@@ -62,20 +62,19 @@ def total_population_by_state():
     state_input = input("Enter a State name or abbreviation: ").strip()
     conn = connect_to_db()
     cur = conn.cursor()
-    # This checks if the input is an abbreviation
-    cur.execute("SELECT state FROM statepop WHERE code = %s;", (state_input.upper(),))
-    state_name = cur.fetchone()
-    if state_name:
-        state_input = state_name[0]
-    cur.execute("SELECT SUM(population) FROM topcities WHERE state = %s;", (state_input,))
-    result = cur.fetchone()
-    cur.close()
-    conn.close()
-    if result and result[0]:
-        print(f"The total population of all the cities in {state_input} is: {result[0]}")
+    if len(state_input) == 2:
+        cur.execute("SELECT population FROM statepop WHERE code = %s;", (state_input.upper(),))
+        state_pop = cur.fetchone()
+        cur.close()
+        conn.close()
+        print(f"The total population of all the cities in {state_input} is: {state_pop}")
     else:
-        print(f"No data found for the state: {state_input}")
-
+        cur.execute("SELECT SUM(population) FROM topcities WHERE state = %s;", (state_input,))
+        result = cur.fetchone()
+        cur.close()
+        conn.close()
+        print(f"The total population of all the cities in {state_input} is: {result[0]}")
+        
 def main():
     check_northfield()
     largest_population_city()
