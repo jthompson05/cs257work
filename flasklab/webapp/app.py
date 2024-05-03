@@ -5,9 +5,19 @@ import psycopg2
 app = Flask(__name__)
 
 # Lists of names and adjectives
-names = ['Alice', 'Alberto', 'Sara', 'Mohammed']
-adjectives = ['Wise', 'Brave', 'Kind', 'Adventurous']
-years = ['1992', '2005', '1989', '1997']
+names = [
+    'Alice', 'Alberto', 'Sara', 'Mohammed', 'Olivia', 'Liam', 'Sophia',
+    'Mason', 'Isabella', 'Ethan', 'Ava', 'Lucas', 'Mia', 'Joshua'
+]
+adjectives = [
+    'Wise', 'Brave', 'Kind', 'Adventurous', 'Courageous', 'Joyful',
+    'Resourceful', 'Tenacious', 'Graceful', 'Inventive', 'Serene',
+    'Diligent', 'Loyal', 'Charismatic'
+]
+years = [
+    '1992', '2005', '1989', '1997', '1980', '1985', '1990', '1995',
+    '2000', '2001', '2002', '2003', '2004', '2006'
+]
 
 # Database connection parameters
 db_params = {
