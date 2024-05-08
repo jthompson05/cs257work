@@ -10,5 +10,5 @@ def welcome():
     return render_template("homepage.html", someText = message)
 
 if __name__ == '__main__':
-    my_port = 5000
+    my_port = 5432
     app.run(host='0.0.0.0', port = my_port) 
