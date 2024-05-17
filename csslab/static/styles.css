@@ -1,6 +1,6 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #ffccff; /* Pink background */
+    background-color: #cce6ff; /* light blue background */
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
 button {
     padding: 15px 30px;
     font-size: 20px;
-    background-color: #ff80df; /* Purple button */
+    background-color: #007bff; /* Blue button */
     color: white;
     border: none;
     cursor: pointer;
@@ -19,14 +19,14 @@ button {
 }
 
 button:hover {
-    background-color: #cc66ff; /* Light purple on hover */
+    background-color: #3399ff; /* light blue on hover */
 }
 
 p {
     font-size: 24px;
-    color: #ff6666; /* Red text */
+    color: #0000ff; /* blue text */
     cursor: pointer;
-}
+}   
 
 img {
     width: 300px;
