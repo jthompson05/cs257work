@@ -8,6 +8,10 @@ body {
     margin-top: 50px;
 }
 
+h1 {
+    text-align: center; /* center text */
+}
+
 button {
     padding: 15px 30px;
     font-size: 20px;
